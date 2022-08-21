@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
+
+/* TIPOGRAFIAS
+font-family: 'Alegreya', serif;
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 42px auto auto auto auto;
+    grid-template-areas:
+        "header"
+        "banner"
+        "section1"
+        "section2"
+        "footer";
+}
+
+/* INICIO NAVBAR */
+.header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #313132;
+    border-bottom: 3px white solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista {
+    display: flex;
+    list-style: none;
+    font-size: 16px;
+    width: 90vw;
+    justify-content: space-evenly;
+}
+
+.lista li a {
+    color: white;
+}
+
+.logo {
+    height: 25px;
+    margin-left: 5px;
+}
+
+/* FIN NAVBAR */
+/* INICIO BANNER */
+.banner {
+    grid-area: banner;
+    background-color: #f5f5f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloBanner {
+    text-align: center;
+}
+
+.tituloBanner h1 {
+    font-family: 'Alegreya', serif;
+    font-size: 12vw;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.tituloBanner h2 {
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
+    font-size: 8vw;
+}
+
+.colorLila {
+    color: #bb3566;
+}
+
+.imgBanner {
+    height: 95vw;
+}
+
+/* FIN BANNER */
+/* INICIO SECTION 1 */
+.section1 {
+    grid-area: section1;
+    background-color: #f5f5f7;
+    border-top: 5px white solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section1 h2 {
+    margin-top: 5px;
+    font-family: 'Alegreya', serif;
+}
+
+.fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tamañoFotos {
+    width: 85vw;
+    margin: 3px 0px;
+}
+
+/* FIN SECTION 1 */
+/* INICIO SECTION 2 */
+.section2 {
+    grid-area: section2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f5f5f7;
+    border-top: 5px white solid;
+}
+
+.textoVideo {
+    margin: 5px 8px;
+}
+
+.textoVideo h2 {
+    font-family: 'Alegreya', serif;
+    font-size: 10vw;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.textoVideo p {
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
+    font-size: 3.7vw;
+    line-height: 1.3;
+}
+
+.contenedorVideo {
+    width: 100vw;
+    height: 55vw;
+    margin-bottom: 5px;
+}
+
+/* FIN SECTION 2 */
+/* INICIO FOOTER */
+/* INICIO REDES SOCIALES Y TELEFONO */
+.footer {
+    grid-area: footer;
+    background-color: #0000006b;
+    border-top: 5px white solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloRedes {
+    font-family: 'Alegreya', serif;
+    font-size: 6vw;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 5px;
+    text-align: center;
+}
+
+.iconSocial {
+    display: flex;
+    justify-content: space-evenly;
+    width: 65vw;
+    margin: 3px 0px;
+}
+
+.iconSocial a img {
+    height: 10vw;
+}
+
+.telefono {
+    text-align: center;
+}
+
+.telefono h4 {
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
+    font-size: 5.7vw;
+}
+
+.telefono p {
+    font-size: 4vw;
+}
+
+/* FIN REDES SOCIALES Y TELEFONO */
+/* INICIO EMAIL */
+.email h4,
+label {
+    text-align: center;
+    font-family: 'Alegreya', serif;
+    font-weight: 700;
+    font-size: 4vw;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario input,
+select {
+    width: 45vw;
+    height: 3vh;
+    margin: 3px;
+    border-radius: 8px;
+}
+
+.formulario textarea {
+    margin: 3px;
+    border-radius: 8px;
+    width: 60vw;
+    height: 15vh;
+}
+
+.boton input {
+    width: 25vw;
+    height: 2.5vh;
+}
+
+/* FIN EMAIL */
+/* INICIO MAPA */
+.contenedorMapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapa {
+    width: 80vw;
+    height: 30vh;
+    margin-bottom: 8px;
+}
+
+.contenedorMapa iframe {
+    border-radius: 8px;
+}
+
+.contenedorMapa h4 {
+    text-align: center;
+    font-family: 'Alegreya', serif;
+    font-weight: 700;
+    font-size: 4vw;
+    margin-bottom: 3px;
+}
+
+/* FIN MAPA */
+
+/* FIN FOOTER */
+
+@media (min-width: 768px) {
+
+    /* INICIO NAVBAR */
+    .lista {
+        width: 55vw;
+        font-size: 18px;
+        justify-content: space-around;
+    }
+
+    .logo{
+        margin-left: 10px;
+    }
+    /* FIN NAVBAR */
+    /* INICIO BANNER */
+    .banner {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .tituloBanner {
+        text-align: left;
+    }
+
+    .tituloBanner h1 {
+        font-size: 7vw;
+        width: 35vw;
+    }
+
+    .tituloBanner h2 {
+        font-size: 4vw;
+    }
+
+    .imgBanner {
+        height: 40vw;
+    }
+
+    /* FIN BANNER */
+    /* INICIO SECTION 1 */
+    .section1,
+    .section2,
+    .footer {
+        border-top: 8px white solid;
+    }
+
+    .fotos {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .tamañoFotos {
+        width: 30vw;
+    }
+
+    /* FIN SECTION 1 */
+    /* INICIO SECTION 2 */
+    .section2 {
+        flex-direction: row-reverse;
+    }
+
+    .contenedorVideo {
+        width: 220vw;
+        height: 30vw;
+        margin-bottom: 0px;
+    }
+
+    .textoVideo {
+        width: 200vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .textoVideo h2 {
+        font-size: 4vw;
+    }
+
+    .textoVideo p {
+        font-size: 1.8vw;
+    }
+
+    /* FIN SECTION 2 */
+    /* INICIO FOOTER */
+    .footer {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 6px 0px;
+    }
+
+    /* INICIO SOCIAL Y TELEFONO */
+    .socialTelefono {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tituloRedes {
+        font-size: 2.5vw;
+    }
+
+    .iconSocial {
+        width: 20vw;
+    }
+
+    .iconSocial a img {
+        height: 4vw;
+    }
+
+    .telefono h4 {
+        font-size: 2.7vw;
+    }
+
+    .telefono p {
+        font-size: 2vw;
+    }
+
+    /* FIN SOCIAL Y TELEFONO */
+    /* INICIO EMAIL */
+    .email h4,
+    label {
+        font-size: 2vw;
+    }
+
+    .formulario input,
+    select {
+        width: 21.5vw;
+    }
+
+    .formulario textarea {
+        width: 32vw;
+    }
+
+    .boton input {
+        width: 12vw;
+        height: 3vh;
+    }
+
+    /* FIN EMAIL */
+    /* INICIO MAPA */
+    .contenedorMapa h4 {
+        font-size: 2vw;
+    }
+
+    .mapa {
+        width: 28vw;
+    }
+
+    /* FIN MAPA */
+    /* FIN FOOTER */
+}
