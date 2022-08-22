@@ -17,12 +17,10 @@ a {
 .container {
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 42px auto auto auto auto;
+    grid-template-rows: 42px auto auto;
     grid-template-areas:
         "header"
-        "banner"
-        "section1"
-        "section2"
+        "main"
         "footer";
 }
 
@@ -32,7 +30,7 @@ a {
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: #313132;
+    background-image: linear-gradient(to right, #313132, #565656);
     border-bottom: 3px white solid;
     display: flex;
     justify-content: space-between;
@@ -51,9 +49,18 @@ a {
     color: white;
 }
 
+.lista li a:hover {
+    text-decoration: underline;
+}
+
 .logo {
     height: 25px;
     margin-left: 5px;
+}
+
+.logo:hover{
+    height: 28px;
+    transition: 0.3s;
 }
 
 /* FIN NAVBAR */
@@ -68,6 +75,9 @@ a {
 
 .tituloBanner {
     text-align: center;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    animation-iteration-count: unset;
 }
 
 .tituloBanner h1 {
@@ -119,6 +129,11 @@ a {
     margin: 3px 0px;
 }
 
+.tamañoFotos:hover {
+    transform: scale(1.05, 1.05) translate(0px, -10px);
+    transition: 0.3s;
+}
+
 /* FIN SECTION 1 */
 /* INICIO SECTION 2 */
 .section2 {
@@ -159,7 +174,7 @@ a {
 /* INICIO REDES SOCIALES Y TELEFONO */
 .footer {
     grid-area: footer;
-    background-color: #0000006b;
+    background-image: linear-gradient(to left, #0000006b, #565656);
     border-top: 5px white solid;
     display: flex;
     flex-direction: column;
@@ -231,6 +246,11 @@ select {
     height: 15vh;
 }
 
+.formulario input:focus,
+textarea:focus {
+    background-color: #dadada;
+}
+
 .boton input {
     width: 25vw;
     height: 2.5vh;
@@ -266,6 +286,52 @@ select {
 
 /* FIN FOOTER */
 
+@keyframes zoom {
+    0% {
+        transform: scale(0.0);
+    }
+
+    10% {
+        transform: scale(0.1);
+    }
+
+    20% {
+        transform: scale(0.2);
+    }
+
+    30% {
+        transform: scale(0.3);
+    }
+
+    40% {
+        transform: scale(0.4);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    60% {
+        transform: scale(0.6);
+    }
+
+    70% {
+        transform: scale(0.7);
+    }
+
+    80% {
+        transform: scale(0.8);
+    }
+
+    90% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 @media (min-width: 768px) {
 
     /* INICIO NAVBAR */
@@ -275,9 +341,10 @@ select {
         justify-content: space-around;
     }
 
-    .logo{
+    .logo {
         margin-left: 10px;
     }
+
     /* FIN NAVBAR */
     /* INICIO BANNER */
     .banner {
